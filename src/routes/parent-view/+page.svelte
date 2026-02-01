@@ -4,9 +4,9 @@
 	let activeRequests = $state([...renewalRequests]);
 	let handlingRequestId = $state<number | null>(null);
 
-	// Flatten all branches from all parents, filtering only for Sainsbury (Current Context)
+	// Flatten all branches from all parents, filtering only for Sainsburry (Current Context)
 	const allBranches = clients
-		.filter((parent) => parent.name.toLowerCase().includes('sainsbury'))
+		.filter((parent) => parent.name.toLowerCase().includes('sainsburry'))
 		.flatMap((parent) =>
 			parent.branches.map((branch) => ({
 				...branch,
